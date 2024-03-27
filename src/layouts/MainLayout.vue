@@ -2,7 +2,10 @@
   <q-layout view="lHh Lpr lFf">
     <q-header class="bg-white">
       <q-toolbar class="w-full flex justify-between items-center">
-        <div class="flex flex-1 justify-center items-center q-pa-sm">
+        <div
+          class="flex flex-1 justify-center items-center q-pa-sm"
+          style="width: 30%"
+        >
           <q-btn
             flat
             icon="menu"
@@ -14,9 +17,9 @@
           <img
             alt="youtube logo"
             src="~assets/youtube.png"
-            style="width: 30px; height: 30px"
+            style="width: 10%; height: 5%"
           />
-          <q-toolbar-title class="text-black text-weight-bold"
+          <q-toolbar-title class="text-black text-weight-medium"
             >YouTube</q-toolbar-title
           >
         </div>
@@ -25,7 +28,7 @@
           class="flex items-center justify-center text-black"
           style="width: 60%"
         >
-          <div class="relative-position overflow-hidden" style="width: 50%">
+          <div class="relative-position" style="width: 70%">
             <q-input outlined dense rounded placeholder="Search"> </q-input>
             <div class="absolute-top-right flex justify-end items-center">
               <span class="q-mr-md text-grey-6"
@@ -35,33 +38,35 @@
                 rounded
                 flat
                 bordered
-                class="flex justify-center items-center q-pa-sm q-px-lg bg-grey-3"
+                class="flex q-pa-sm q-px-lg bg-grey-3"
               >
                 <q-icon name="search" />
               </q-btn>
             </div>
           </div>
 
-          <q-icon name="mic" size="24px" class="q-ma-md" />
+          <q-icon name="mic" size="15px" class="q-ma-md" />
         </div>
 
-        <div class="flex flex-1 justify-center items-center q-pa-sm">
-          <q-btn
-            flat
-            icon="menu"
-            aria-label="Menu"
-            class="text-black"
-            @click="toggleLeftDrawer"
-          />
+        <div
+          class="flex items-center justify-center text-black"
+          style="width: 30%"
+        >
+          <div class="relative-position" style="width: 50%">
+            <q-input outlined dense rounded> </q-input>
+            <div class="absolute-top-left flex justify-start items-center">
+              <q-avatar
+                class="q-ma-sm items-center"
+                color="blue"
+                text-color="white"
+                icon="person"
+                size="24px"
+              />
+              <span class="q-ml-md text-grey-6"> User </span>
+            </div>
+          </div>
 
-          <img
-            alt="youtube logo"
-            src="~assets/youtube.png"
-            style="width: 30px; height: 30px"
-          />
-          <q-toolbar-title class="text-black text-weight-bold"
-            >YouTube</q-toolbar-title
-          >
+          <q-icon name="mic" size="15px" class="q-ma-md" />
         </div>
       </q-toolbar>
     </q-header>
