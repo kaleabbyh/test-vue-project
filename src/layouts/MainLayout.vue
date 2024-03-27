@@ -19,9 +19,7 @@
             src="~assets/youtube.png"
             style="width: 10%; height: 5%"
           />
-          <q-toolbar-title class="text-black text-weight-medium"
-            >YouTube</q-toolbar-title
-          >
+          <q-toolbar-title class="text-black text-h8">YouTube</q-toolbar-title>
         </div>
 
         <div
@@ -52,28 +50,41 @@
           class="flex items-center justify-center text-black"
           style="width: 30%"
         >
+          <img
+            alt="youtube logo"
+            src="~assets/theedot.png"
+            style="width: 10%; height: 5%"
+            class="text-grey-8"
+          />
           <div class="relative-position" style="width: 50%">
             <q-input outlined dense rounded> </q-input>
-            <div class="absolute-top-left flex justify-start items-center">
-              <q-avatar
-                class="q-ma-sm items-center"
-                color="blue"
-                text-color="white"
-                icon="person"
-                size="24px"
-              />
-              <span class="q-ml-md text-grey-6"> User </span>
+            <div class="flex justify-center items-center">
+              <div class="absolute-top-left">
+                <q-avatar
+                  class="q-ma-sm items-center"
+                  color="blue"
+                  text-color="white"
+                  icon="person"
+                  size="24px"
+                />
+                <span class="q-ml-md text-grey-6"> User </span>
+              </div>
             </div>
           </div>
 
-          <q-icon name="mic" size="15px" class="q-ma-md" />
+          <q-icon name="notifications" size="15px" class="q-ma-md" />
         </div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+    <q-drawer
+      v-model="leftDrawerOpen"
+      show-if-above
+      bordered
+      class="q-hide-gt-sm"
+    >
       <q-list>
-        <q-item-label header> Essential Links </q-item-label>
+        <q-item-label header> </q-item-label>
 
         <EssentialLink
           v-for="link in linksList"
@@ -99,46 +110,22 @@ defineOptions({
 
 const linksList = [
   {
-    title: "Docs",
-    caption: "quasar.dev",
-    icon: "school",
-    link: "https://quasar.dev",
+    title: "Home",
+    caption: "Home",
+    icon: "home",
+    link: "#",
   },
   {
-    title: "Github",
-    caption: "github.com/quasarframework",
-    icon: "code",
-    link: "https://github.com/quasarframework",
+    title: "Music",
+    caption: "Music",
+    icon: "music_note",
+    link: "#",
   },
   {
-    title: "Discord Chat Channel",
-    caption: "chat.quasar.dev",
-    icon: "chat",
-    link: "https://chat.quasar.dev",
-  },
-  {
-    title: "Forum",
-    caption: "forum.quasar.dev",
-    icon: "record_voice_over",
-    link: "https://forum.quasar.dev",
-  },
-  {
-    title: "Twitter",
-    caption: "@quasarframework",
-    icon: "rss_feed",
-    link: "https://twitter.quasar.dev",
-  },
-  {
-    title: "Facebook",
-    caption: "@QuasarFramework",
-    icon: "public",
-    link: "https://facebook.quasar.dev",
-  },
-  {
-    title: "Quasar Awesome",
-    caption: "Community Quasar projects",
-    icon: "favorite",
-    link: "https://awesome.quasar.dev",
+    title: "History",
+    caption: "History",
+    icon: "history",
+    link: "#",
   },
 ];
 
@@ -148,3 +135,31 @@ function toggleLeftDrawer() {
   leftDrawerOpen.value = !leftDrawerOpen.value;
 }
 </script>
+
+
+<style scoped>
+.custom-title {
+  font-size: 20px; /* Default font size */
+}
+
+@media (max-width: 992px) {
+  /* Small screens */
+  .custom-title {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Medium screens */
+  .custom-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Large screens */
+  .custom-title {
+    font-size: 12px;
+  }
+}
+</style>
