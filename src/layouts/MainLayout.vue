@@ -77,12 +77,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      class="q-hide-gt-sm"
-    >
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered :width="100">
       <q-list>
         <q-item-label header> </q-item-label>
 
