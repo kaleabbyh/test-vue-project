@@ -47,7 +47,7 @@
         </div>
 
         <div
-          class="flex items-center justify-center text-black"
+          class="flex items-center justify-center text-black no-wrap"
           style="width: 30%"
         >
           <img
@@ -56,22 +56,19 @@
             style="width: 10%; height: 5%"
             class="text-grey-8"
           />
-          <div class="relative-position" style="width: 50%">
-            <q-input outlined dense rounded> </q-input>
-            <div class="flex justify-center items-center">
-              <div class="absolute-top-left">
-                <q-avatar
-                  class="q-ma-sm items-center"
-                  color="blue"
-                  text-color="white"
-                  icon="person"
-                  size="24px"
-                />
-                <span class="q-ml-md text-grey-6"> User </span>
-              </div>
+          <q-btn outline rounded color="primary">
+            <div class="row no-wrap flex justify-center items-center">
+              <q-avatar
+                left
+                icon="person"
+                color="blue"
+                text-color="white"
+                size="24px"
+                class=""
+              />
+              <div class="text-center q-ml-md text-grey-6">User</div>
             </div>
-          </div>
-
+          </q-btn>
           <q-icon name="notifications" size="15px" class="q-ma-md" />
         </div>
       </q-toolbar>
@@ -156,5 +153,9 @@ function toggleLeftDrawer() {
   .custom-title {
     font-size: 12px;
   }
+}
+
+.custom-button {
+  border-color: blue;
 }
 </style>
